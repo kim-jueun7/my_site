@@ -1,0 +1,342 @@
+// body {
+// 	font-family: "토스폰트";
+// }
+body{font-family:"Pretendard";}
+
+header {
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+	backdrop-filter: blur(4px);
+	box-shadow: 0 1px 1px #4978BC33;
+	font-family:"Oranienbaum";
+    font-weight:bold;
+	font-size:1.2vw;
+
+	#title {
+		float: left; margin: 20px 40px; color:#3966a7;
+	}
+
+	#gnb {
+		float: right; margin: 20px 40px; color: #84a0c7;
+		ul {display: flex; gap: 40px;}
+		li { cursor: pointer; }
+		li.active { color: #3966a7; }
+	}
+}	//header
+ 
+main {
+	height: 100vh;
+	overflow: hidden;
+}
+
+main .arrow {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	color:#3966a7;
+
+	i {
+		font-size: 2.3vw;
+		cursor: pointer;
+	}
+
+	.hidden {
+		display: none;
+	}
+}
+
+@keyframes move {
+	to {
+		bottom: 24px;
+	}
+}
+
+.mouse {
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 100;
+	animation: move .3s alternate infinite;
+	font-size:2.3vw;
+	color:#3966a7;
+}
+
+
+.container {
+	.area {
+		width: 100%; height: 100vh; position:relative;
+	}
+
+	#main {
+		background: #F6F6FC;
+		h1{font-family:"Great Vibes"; font-size:14.8vw; position:absolute; left:20%; top:54%; color:#4978BC; 
+			transform:translateY(-50%);}
+		h3{
+			font-family:"Gowun Batang"; font-size:1.6vw; position:absolute; right:20%; top:41%;
+			color:#4978BC; transform:translateY(50%); line-height:normal;
+			span{font-weight:bold;}
+		}
+		.movie{
+			width:100%; height:100%;
+			video{width:100%; height:100%; object-fit:cover; opacity:0.2;}
+		}
+	}//main
+
+	#about {
+		background: #fff;
+	}
+
+	#web {
+		background: #F6F6FC;
+	}
+
+	#visual {
+		background: #FDF0F3;
+	}
+
+	#contact {
+		background:#eef2f8;
+	}
+}
+
+main .pager {
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+
+	span {
+		display: block;
+		margin: 8px 0;
+		width: 8px;
+		height: 8px;
+		background: #3966a7;
+		border-radius: 50%;
+		opacity: 0.4;
+		cursor: pointer;
+	}
+
+	span.active {
+		opacity: 1;
+	}
+}	//main .pager
+
+#about {
+	.inner {
+		position:relative; width: 90%; height:calc(100% - 56px); padding-top:56px; margin:0 auto;
+		line-height:1.8;
+		.profile_title{
+			display:flex; color:#3966a7; width:100%; top:10%; gap:11.6%; align-items:center; margin-top:2%;
+			h2{font-size:5vw; font-family:"Oranienbaum"; margin-left:3%;}
+			p{font-family:"Gowun Batang"; font-size:2vw;}
+			span{background:url("../images/txt_back.png") 0 bottom no-repeat; background-size:100% auto;
+				padding-bottom:2px;}
+		}//profile_title
+		.profile_1{
+			display:flex; align-items:top; width:100%;
+			> *{width:34%;}
+			img{ width:80%;}
+			span{font-weight:550;}
+			.education{
+				h3{font-size:1.6vw; color:#3966a7; font-weight:bold; padding-top:13%;}
+				p{
+					font-size:1.2vw; color:#66717F;
+					span{margin-right:4%;}
+				}
+			}
+			.experience{
+				h3{font-size:1.6vw; color:#3966a7; font-weight:bold; padding-top:13%;}
+				p{
+					font-size:1.2vw; color:#66717F;
+					span{margin-right:4%;}
+				}
+			}
+		}//profile_1
+		.profile_2{
+			display:flex; align-items:top; width:100%;
+			> *{width:34%;}
+			span{font-weight:550;}
+			.about_me{ 
+				margin-left:9%; width:24.9%;
+				h3{font-size:1.6vw; color:#3966a7; font-weight:bold;}
+				p{font-size:1.2vw; color:#66717F;}
+			}
+			.license{
+				h3{font-size:1.6vw; color:#3966a7; font-weight:bold;}
+				p{
+					font-size:1.2vw; color:#66717F;
+					span{margin-right:4%;}
+				}
+			}
+			.tool_skills{
+				display:inline-block;
+				h3{font-size:1.6vw; color:#3966a7; font-weight:bold;}
+				.toolSkill_icons{display:flex; gap:2%;}
+			}
+		}//profile_2
+	}//inner
+}	//about
+
+#web {
+	line-height:1.5; font-size:1.2vw;
+	.inner {
+		width: 90%;
+		height: calc(100% - 56px);
+		padding-top: 70px;
+		margin: 0 auto;
+	}
+
+	.list {
+		display: flex;
+		gap: 60px;
+	}
+
+	.item {
+		width: calc((100% - 120px) / 3);
+	}
+
+	.box {
+		background: #fff;
+		border-radius: 16px;
+		overflow: hidden;
+	}
+
+	.img img {
+		width: 100%;
+	}
+
+	h3 {padding-top:4%; padding-left: 40px; font-weight:bold; color:#484894;}
+
+	.desc {
+		padding:0 7%;
+		margin: 20px 0 40px;
+	}
+
+	.link {
+		display: flex;
+		gap: 8%;
+		padding:0 7%;
+		padding-bottom: 20px;
+
+		a {
+			display: block;
+			border-radius: 20px;
+			background: #8585ca;
+			height: 40px;
+			line-height: 40px;
+			padding: 0 20px;
+			color: #fff; font-weight:bold;
+			text-decoration: none;
+		}
+	}
+}	//web
+
+
+#visual {
+	line-height:1.5; font-size:1.2vw;
+	.inner {
+		width: 90%;
+		height: calc(100% - 56px);
+		padding-top: 70px;
+		margin: 0 auto;
+	}
+
+	.list {
+		display: flex;
+		gap: 60px;
+	}
+
+	.item {
+		width: calc((100% - 120px) / 3);
+	}
+
+	.box {
+		background: #fff;
+		border-radius: 16px;
+		overflow: hidden;
+	}
+
+	.img img {
+		width: 100%;
+	}
+
+	h3 {padding-top:4%; padding-left: 40px; font-weight:bold; color:#b6687c;}
+
+	.desc {
+		padding:0 7%;
+		margin: 20px 0 40px;
+	}
+
+	.link {
+		display: flex;
+		gap: 8%;
+		padding:0 7%;
+		padding-bottom: 20px;
+
+		a {
+			display: block;
+			border-radius: 20px;
+			background: #e1a3b2;
+			height: 40px;
+			line-height: 40px;
+			padding: 0 20px;
+			color: #fff; font-weight:bold;
+			text-decoration: none;
+		}
+	}
+}	//visual
+
+
+#contact{
+	color:#3966a7; width:100%;
+	.contact_title{
+		position:absolute; width:100%; top:50%; left:0; transform:translateY(-50%);
+		h2{font-family:"Great Vibes"; font-size:8vw; text-align:center; align-items:center;
+			margin-bottom:30px;}
+		p{font-family:"Gowun Batang"; font-size:1.6vw; text-align:center; align-items:center;
+			line-height:normal;
+			span{font-weight:bold;}
+		}
+	}	//contact_title
+	ul{
+		position:absolute; font-size:1.3vw; left:8%; bottom:8%;
+		line-height:1.8;
+		li span{font-weight:bold; display:inline-block; width:120px;}
+	}
+}	//contact
+
+
+//modal 만들기
+#modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	background: #000000bb;
+	display: none;	//버튼을 클릭했을때 보이도록 설정1
+	justify-content: center;	//가운데 배치
+	align-items: center;
+	&.active{display: flex;}	//버튼을 클릭했을때 보이도록 설정2
+	.modal_inner{
+		width: 80%;
+		height: 84%;
+		background: #fff;
+		border: 10px solid #fff;
+		border-radius: 12px;
+	}
+	iframe{ width: 100%; height: 100%;}
+	.close_modal{
+		color: #fff;
+		font-size:30px;
+		position:absolute;
+		top:40px;
+		right:40px;
+		cursor:pointer;
+	}
+}
+
+//end:#modal

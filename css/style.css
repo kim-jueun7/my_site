@@ -1,0 +1,446 @@
+body {
+  font-family: "Pretendard";
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  box-shadow: 0 1px 1px rgba(73, 120, 188, 0.2);
+  font-family: "Oranienbaum";
+  font-weight: bold;
+  font-size: 1.2vw;
+}
+header #title {
+  float: left;
+  margin: 20px 40px;
+  color: #3966a7;
+}
+header #gnb {
+  float: right;
+  margin: 20px 40px;
+  color: #84a0c7;
+}
+header #gnb ul {
+  display: flex;
+  gap: 40px;
+}
+header #gnb li {
+  cursor: pointer;
+}
+header #gnb li.active {
+  color: #3966a7;
+}
+
+main {
+  height: 100vh;
+  overflow: hidden;
+}
+
+main .arrow {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  color: #3966a7;
+}
+main .arrow i {
+  font-size: 2.3vw;
+  cursor: pointer;
+}
+main .arrow .hidden {
+  display: none;
+}
+
+@keyframes move {
+  to {
+    bottom: 24px;
+  }
+}
+.mouse {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  animation: move 0.3s alternate infinite;
+  font-size: 2.3vw;
+  color: #3966a7;
+}
+
+.container .area {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.container #main {
+  background: #F6F6FC;
+}
+.container #main h1 {
+  font-family: "Great Vibes";
+  font-size: 14.8vw;
+  position: absolute;
+  left: 20%;
+  top: 54%;
+  color: #4978BC;
+  transform: translateY(-50%);
+}
+.container #main h3 {
+  font-family: "Gowun Batang";
+  font-size: 1.6vw;
+  position: absolute;
+  right: 20%;
+  top: 41%;
+  color: #4978BC;
+  transform: translateY(50%);
+  line-height: normal;
+}
+.container #main h3 span {
+  font-weight: bold;
+}
+.container #main .movie {
+  width: 100%;
+  height: 100%;
+}
+.container #main .movie video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.2;
+}
+.container #about {
+  background: #fff;
+}
+.container #web {
+  background: #F6F6FC;
+}
+.container #visual {
+  background: #FDF0F3;
+}
+.container #contact {
+  background: #eef2f8;
+}
+
+main .pager {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+main .pager span {
+  display: block;
+  margin: 8px 0;
+  width: 8px;
+  height: 8px;
+  background: #3966a7;
+  border-radius: 50%;
+  opacity: 0.4;
+  cursor: pointer;
+}
+main .pager span.active {
+  opacity: 1;
+}
+
+#about .inner {
+  position: relative;
+  width: 90%;
+  height: calc(100% - 56px);
+  padding-top: 56px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+#about .inner .profile_title {
+  display: flex;
+  color: #3966a7;
+  width: 100%;
+  top: 10%;
+  gap: 11.6%;
+  align-items: center;
+  margin-top: 2%;
+}
+#about .inner .profile_title h2 {
+  font-size: 5vw;
+  font-family: "Oranienbaum";
+  margin-left: 3%;
+}
+#about .inner .profile_title p {
+  font-family: "Gowun Batang";
+  font-size: 2vw;
+}
+#about .inner .profile_title span {
+  background: url("../images/txt_back.png") 0 bottom no-repeat;
+  background-size: 100% auto;
+  padding-bottom: 2px;
+}
+#about .inner .profile_1 {
+  display: flex;
+  align-items: top;
+  width: 100%;
+}
+#about .inner .profile_1 > * {
+  width: 34%;
+}
+#about .inner .profile_1 img {
+  width: 80%;
+}
+#about .inner .profile_1 span {
+  font-weight: 550;
+}
+#about .inner .profile_1 .education h3 {
+  font-size: 1.6vw;
+  color: #3966a7;
+  font-weight: bold;
+  padding-top: 13%;
+}
+#about .inner .profile_1 .education p {
+  font-size: 1.2vw;
+  color: #66717F;
+}
+#about .inner .profile_1 .education p span {
+  margin-right: 4%;
+}
+#about .inner .profile_1 .experience h3 {
+  font-size: 1.6vw;
+  color: #3966a7;
+  font-weight: bold;
+  padding-top: 13%;
+}
+#about .inner .profile_1 .experience p {
+  font-size: 1.2vw;
+  color: #66717F;
+}
+#about .inner .profile_1 .experience p span {
+  margin-right: 4%;
+}
+#about .inner .profile_2 {
+  display: flex;
+  align-items: top;
+  width: 100%;
+}
+#about .inner .profile_2 > * {
+  width: 34%;
+}
+#about .inner .profile_2 span {
+  font-weight: 550;
+}
+#about .inner .profile_2 .about_me {
+  margin-left: 9%;
+  width: 24.9%;
+}
+#about .inner .profile_2 .about_me h3 {
+  font-size: 1.6vw;
+  color: #3966a7;
+  font-weight: bold;
+}
+#about .inner .profile_2 .about_me p {
+  font-size: 1.2vw;
+  color: #66717F;
+}
+#about .inner .profile_2 .license h3 {
+  font-size: 1.6vw;
+  color: #3966a7;
+  font-weight: bold;
+}
+#about .inner .profile_2 .license p {
+  font-size: 1.2vw;
+  color: #66717F;
+}
+#about .inner .profile_2 .license p span {
+  margin-right: 4%;
+}
+#about .inner .profile_2 .tool_skills {
+  display: inline-block;
+}
+#about .inner .profile_2 .tool_skills h3 {
+  font-size: 1.6vw;
+  color: #3966a7;
+  font-weight: bold;
+}
+#about .inner .profile_2 .tool_skills .toolSkill_icons {
+  display: flex;
+  gap: 2%;
+}
+
+#web {
+  line-height: 1.5;
+  font-size: 1.2vw;
+}
+#web .inner {
+  width: 90%;
+  height: calc(100% - 56px);
+  padding-top: 70px;
+  margin: 0 auto;
+}
+#web .list {
+  display: flex;
+  gap: 60px;
+}
+#web .item {
+  width: calc((100% - 120px) / 3);
+}
+#web .box {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+#web .img img {
+  width: 100%;
+}
+#web h3 {
+  padding-top: 4%;
+  padding-left: 40px;
+  font-weight: bold;
+  color: #484894;
+}
+#web .desc {
+  padding: 0 7%;
+  margin: 20px 0 40px;
+}
+#web .link {
+  display: flex;
+  gap: 8%;
+  padding: 0 7%;
+  padding-bottom: 20px;
+}
+#web .link a {
+  display: block;
+  border-radius: 20px;
+  background: #8585ca;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#visual {
+  line-height: 1.5;
+  font-size: 1.2vw;
+}
+#visual .inner {
+  width: 90%;
+  height: calc(100% - 56px);
+  padding-top: 70px;
+  margin: 0 auto;
+}
+#visual .list {
+  display: flex;
+  gap: 60px;
+}
+#visual .item {
+  width: calc((100% - 120px) / 3);
+}
+#visual .box {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+#visual .img img {
+  width: 100%;
+}
+#visual h3 {
+  padding-top: 4%;
+  padding-left: 40px;
+  font-weight: bold;
+  color: #b6687c;
+}
+#visual .desc {
+  padding: 0 7%;
+  margin: 20px 0 40px;
+}
+#visual .link {
+  display: flex;
+  gap: 8%;
+  padding: 0 7%;
+  padding-bottom: 20px;
+}
+#visual .link a {
+  display: block;
+  border-radius: 20px;
+  background: #e1a3b2;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#contact {
+  color: #3966a7;
+  width: 100%;
+}
+#contact .contact_title {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+#contact .contact_title h2 {
+  font-family: "Great Vibes";
+  font-size: 8vw;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+#contact .contact_title p {
+  font-family: "Gowun Batang";
+  font-size: 1.6vw;
+  text-align: center;
+  align-items: center;
+  line-height: normal;
+}
+#contact .contact_title p span {
+  font-weight: bold;
+}
+#contact ul {
+  position: absolute;
+  font-size: 1.3vw;
+  left: 8%;
+  bottom: 8%;
+  line-height: 1.8;
+}
+#contact ul li span {
+  font-weight: bold;
+  display: inline-block;
+  width: 120px;
+}
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.7333333333);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#modal.active {
+  display: flex;
+}
+#modal .modal_inner {
+  width: 80%;
+  height: 84%;
+  background: #fff;
+  border: 10px solid #fff;
+  border-radius: 12px;
+}
+#modal iframe {
+  width: 100%;
+  height: 100%;
+}
+#modal .close_modal {
+  color: #fff;
+  font-size: 30px;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
